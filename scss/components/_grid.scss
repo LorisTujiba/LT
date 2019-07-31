@@ -1,0 +1,22 @@
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.grid-3{
+    >article{
+        width: 32%;
+        box-sizing: border-box;
+    }
+    @media (max-width: 480px){
+        >article{
+            width: 100%;
+        }
+    }
+    @media (min-width: 481px) and (max-width: 960px ){
+        >article{
+            width: 49%;
+        }
+    }
+}

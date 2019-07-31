@@ -1,0 +1,55 @@
+.notification{
+    background-color: $smoke-grey;
+    border-bottom: 1px solid $smoke-grey-shade;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0;
+    >div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 720px;
+        box-sizing: border-box;
+        >button{
+            flex-shrink: 0;
+        }
+        @media (max-width: 768px){
+            padding: 15px;
+            flex-direction: column;
+            align-items: flex-start;
+            >p{
+                text-align: left;
+                margin: 0 0 10px 0;
+            }
+        }
+    }
+}
+
+@keyframes closeNotification{
+    from{
+        top: 0px;
+    }
+    25%{
+        height: 75px;
+    }
+    50%{
+        height: 50px;
+        top: -20px;
+    }
+    50%{
+        top: -40px;
+        height: 25px;
+    }
+    to{
+        top: -70px;
+        height: 0px;
+        border: none;
+        visibility: hidden;
+    }
+}
+
+.notification-closed{
+    animation: closeNotification forwards 0.25s ease-in;
+}

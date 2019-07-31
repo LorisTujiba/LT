@@ -1,0 +1,15 @@
+article{
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid $smoke-grey-shade;
+    margin-bottom: 25px;    
+    >header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    p{
+        text-align: left;
+        margin-bottom: 0;
+    }
+}

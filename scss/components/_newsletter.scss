@@ -1,0 +1,60 @@
+.newsletter{
+    position: fixed;
+    bottom: -500px;
+    left: 0;
+    background-color: rgba(0, 74, 117, 0.9);
+    width: 640px;
+    padding: 25px;
+    box-sizing: border-box;
+    color: white;
+    >button{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    input{
+        outline: none;
+        border: 1px solid $dark-blue;
+        border-radius: 2px;
+        padding: 5px;
+    }
+    @media (max-width: 768px){
+        width: 100%;
+        p{
+            text-align: left;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            >input{
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@keyframes showNewsletter{
+    from{
+        bottom: -500px;
+    }
+    to{
+        bottom: 0;
+    }
+}
+
+@keyframes hideNewsletter{
+    from{
+        bottom: 0;
+    }
+    to{
+        bottom: -500px;
+    }
+}
+
+.newsletter-show{
+    animation: showNewsletter forwards 0.5s ease-in;
+}
+
+.newsletter-closed{
+    animation: hideNewsletter forwards 0.25s ease-in;
+}

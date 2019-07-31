@@ -1,0 +1,100 @@
+@import 'colors';
+@import 'components/notification';
+@import 'components/button';
+@import 'components/grid';
+@import 'components/article';
+@import 'components/newsletter';
+
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: blue;
+}
+
+h1,h2,h3,h4,h5,h6, figure{
+    margin: 0;
+}
+
+p{
+    text-align: center;
+    line-height: 24px;
+    margin-bottom: 30px;
+}
+
+.mb-4{
+    margin-bottom: 40px;
+}
+
+.container{
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    @media (max-width: 768px){
+        width: auto;
+    }
+    @media (min-width: 768px) and (max-width: 991px){
+        width: 750px;
+    }
+    @media (min-width: 992px) and (max-width: 1199px){
+        width: 970px;
+    }
+    @media (min-width: 1200px){
+        width: 1170px;
+    }
+}
+
+.hero-content{
+    background-image: url('assets/work-desk.jpg');
+    background-size: cover;
+    color: white;
+    >div{
+        height: 60vh;
+        padding: 0 15px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgba(0, 74, 117, 0.7);
+        position: relative;
+        >figure{
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            img{
+                width: 40px;
+            }
+        }
+        >h1{
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px){
+            >h2, h1{
+                text-align: center;
+                line-height: 37px;
+            }
+        }
+    }
+}
+
+main{
+    background-color: $smoke-grey;
+    padding: 100px 0 50px 0;
+    text-align: center;
+    color: #555;
+    h3{
+        text-transform: capitalize;
+    }
+}
+
+footer{
+    background-color: $dark-blue;
+    color: white;
+    >div{
+        padding: 20px;
+        text-align: center;
+    }
+}
