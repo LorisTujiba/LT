@@ -5,14 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node app.js",
-    "sass-dev": "node-sass --watch scss/index.scss --output public --importer node_modules/node-sass-import"
+    "start": "node app.js",
+    "sass-dev": "node-sass --watch scss/index.scss --output public --importer node_modules/node-sass-import",
+    "sass-prod": "postcss --use autoprefixer -b \"last 2 version\" <public/index.css | postcss --use cssnano > public/app.css"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^9.6.1",
+    "cssnano": "^4.1.10",
     "express": "^4.17.1",
     "node-sass": "^4.12.0",
-    "node-sass-import": "^2.0.1"
+    "node-sass-import": "^2.0.1",
+    "postcss": "^7.0.17",
+    "postcss-cli": "^6.1.3"
   }
 }
