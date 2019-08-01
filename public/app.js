@@ -6,7 +6,7 @@ function setCookie(name,value,minutes) {
     var expires = "";
     if (minutes) {
         var date = new Date();
-        date.setTime(date.getTime() + (minutes*60*60*1000));
+        date.setTime(date.getTime() + (minutes*60*1000));
         expires = "; expires=" + date.toUTCString();
     }
     document.cookie = name + "=" + (value || "")  + expires + "; path=/";
